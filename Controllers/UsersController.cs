@@ -1,6 +1,7 @@
 
 using API.Data;
 using API.Entities;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +18,7 @@ public class UsersController(DataContext context) : ControllerBase
     {
         var users = await context.Users.ToListAsync();
 
-        return Ok(users);
+        return users;
     }
 
         [HttpGet("{id:int}")]

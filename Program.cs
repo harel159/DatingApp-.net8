@@ -20,7 +20,5 @@ var app = builder.Build();
 
 app.MapControllers();
 
-app.MapGet("/",()=> "welcome to API!");
-
 
 app.Run();
